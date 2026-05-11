@@ -1,7 +1,8 @@
 services:
   zipper:
     container_name: "zipper"
-    build: .
+    #build: .
+    image: ashishwayachal12/zipper:latest
     ports:
       - "1111:80"
     volumes:
