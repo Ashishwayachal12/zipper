@@ -1,0 +1,19 @@
+services:
+  zipper:
+    container_name: "zipper"
+    build: .
+    ports:
+      - "1111:80"
+    volumes:
+      - "zipper-vol:/usr/share/nginx/html/"
+    networks:
+      - "zipper-net"
+
+volumes:
+  zipper-vol:
+    name: "zipper-vol"
+
+networks:
+  zipper-net:
+    name: "zipper-net"
+
