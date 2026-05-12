@@ -3,6 +3,7 @@ services:
     container_name: "zipper"
     #build: .
     image: ashishwayachal12/zipper:latest
+    restart: always
     ports:
       - "1111:80"
     volumes:
