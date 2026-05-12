@@ -51,7 +51,7 @@ pipeline {
 
     success {
         echo "DEPLOYMENT SUCCESSFUL"
-        mail to: 'ashishwayachal14@gmail.com,kabshataiyub@gmail.com',
+        mail to: 'ashishwayachal14@gmail.com,kabshataiyub@gmail.com,siddardha070@gmail.com',
         subject: "SUCCESS: Jenkins Build ${BUILD_NUMBER}",
         body: """
         Build Status : SUCCESS
@@ -64,7 +64,7 @@ pipeline {
 
     failure {
         echo "DEPLOYMENT FAILED"
-        mail to: 'ashishwayachal14@gmail.com,kabshataiyub@gmail.com',
+        mail to: 'ashishwayachal14@gmail.com,kabshataiyub@gmail.com,siddardha070@gmail.com',
         subject: "FAILED: Jenkins Build ${BUILD_NUMBER}",
         body: """
         Build Status : FAILED
