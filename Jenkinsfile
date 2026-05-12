@@ -1,6 +1,5 @@
 pipeline {
     agent any
-
     environment {
         IMAGE_NAME = "ashishwayachal12/zipper"
         IMAGE_TAG  = "${BUILD_ID}"
