@@ -3,7 +3,7 @@ pipeline {
     environment {
         IMAGE_NAME = "ashishwayachal12/zipper"
         IMAGE_TAG  = "${BUILD_ID}"
-        SERVER_IP  = "16.171.196.70"
+        SERVER_IP  = "16.171.31.237"
         APP_PORT   = "1111"
     }
 
