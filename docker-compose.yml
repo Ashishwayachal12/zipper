@@ -6,7 +6,7 @@ services:
     ports:
       - "1111:80"
     volumes:
-      - "zipper-vol:/usr/share/nginx/html/"
+      - "zipper-vol:/usr/share/nginx/html"
     networks:
       - "zipper-net"
 
