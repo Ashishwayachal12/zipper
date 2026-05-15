@@ -3,7 +3,7 @@ pipeline {
     environment {
         IMAGE_NAME = "ashishwayachal12/zipper"
         IMAGE_TAG  = "${BUILD_ID}"
-        SERVER_IP  = "16.171.31.237"
+        SERVER_IP  = "13.60.34.218"
         APP_PORT   = "1111"
     }
 
@@ -51,7 +51,7 @@ pipeline {
 
     success {
         echo "DEPLOYMENT SUCCESSFUL"
-        mail to: 'ashishwayachal14@gmail.com,kabshataiyub@gmail.com,siddardha070@gmail.com',
+        mail to: 'ashishwayachal14@gmail.com,kabshataiyub@gmail.com',
         subject: "SUCCESS: Jenkins Build ${BUILD_NUMBER}",
         body: """
         Build Status : SUCCESS
@@ -64,7 +64,7 @@ pipeline {
 
     failure {
         echo "DEPLOYMENT FAILED"
-        mail to: 'ashishwayachal14@gmail.com,kabshataiyub@gmail.com,siddardha070@gmail.com',
+        mail to: 'ashishwayachal14@gmail.com,kabshataiyub@gmail.com',
         subject: "FAILED: Jenkins Build ${BUILD_NUMBER}",
         body: """
         Build Status : FAILED
