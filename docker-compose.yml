@@ -1,8 +1,8 @@
 services:
   zipper:
     container_name: "zipper"
-    #build: .
-    image: ashishwayachal12/zipper:latest
+    build: .
+    #image: ashishwayachal12/zipper:latest
     restart: always
     ports:
       - "1111:80"
