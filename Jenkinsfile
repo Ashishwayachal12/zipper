@@ -61,7 +61,6 @@ pipeline {
         http://${SERVER_IP}:${APP_PORT}
         """
     }
-
     failure {
         echo "DEPLOYMENT FAILED"
         mail to: 'ashishwayachal14@gmail.com,kabshataiyub@gmail.com',
