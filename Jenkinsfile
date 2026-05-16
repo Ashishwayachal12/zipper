@@ -70,20 +70,20 @@ pipeline {
             echo "DEPLOYMENT SUCCESSFUL"
             mail to: 'ashishwayachal14@gmail.com,kabshataiyub@gmail.com',
                  subject: "SUCCESS: Jenkins Build ${BUILD_NUMBER}",
-                 body: '''
+                 body: """
                 Build Status : SUCCESS
                 Job Name     : ${JOB_NAME}
                 Build Number : ${BUILD_NUMBER}
                 Application URL:
                 http://${SERVER_IP}:${APP_PORT}
-'''
+              """
         }
 
         failure {
             echo "DEPLOYMENT FAILED"
             mail to: 'ashishwayachal14@gmail.com,kabshataiyub@gmail.com',
                  subject: "FAILED: Jenkins Build ${BUILD_NUMBER}",
-                 body: '''
+                 body: """
                  Build Status : FAILED
                  Job Name     : ${JOB_NAME}
                  Build Number : ${BUILD_NUMBER}
@@ -91,7 +91,7 @@ pipeline {
                  ${BUILD_URL}
                  Server IP : ${SERVER_IP}
                  Port      : ${APP_PORT}
-'''
+           """
         }
     }
 }
