@@ -1,21 +1,21 @@
 services:
-  zipper:
-    container_name: "zipper"
+  santra:
+    container_name: "santra"
     build: .
-    image: ashishwayachal12/zipper:${BUILD_NUMBER}
+    image: ashishwayachal12/santra:${BUILD_NUMBER}
     restart: always
     ports:
       - "1111:80"
     #volumes:
      # - "zipper-vol:/usr/share/nginx/html"
     networks:
-      - "zipper-net"
+      - "santra-net"
 
 #volumes:
  # zipper-vol:
   #  name: "zipper-vol"
 
 networks:
-  zipper-net:
-    name: "zipper-net"
+  santra-net:
+    name: "santra-net"
 
