@@ -2,7 +2,7 @@ pipeline {
     
     agent any
     environment {
-        IMAGE_NAME = "ashishwayachal12/zipper"
+        IMAGE_NAME = "ashishwayachal12/santra"
         IMAGE_TAG  = "${BUILD_ID}"
         APP_PORT   = "1111"
     }
@@ -11,7 +11,7 @@ pipeline {
         stage("CODE") {
             steps {
                 echo "Cloning the code..."
-                git url: "https://github.com/Ashishwayachal12/zipper.git", branch: "main"
+                git url: "https://github.com/Ashishwayachal12/santra.git", branch: "main"
                 echo "Code cloning successful"
             }
         }
@@ -32,7 +32,7 @@ pipeline {
         stage("BUILD") {
             steps {
                 echo "Building Docker image..."
-                sh "docker build -t zipper:${IMAGE_TAG} ."
+                sh "docker build -t santra:${IMAGE_TAG} ."
             }
         }
 
@@ -49,7 +49,7 @@ pipeline {
         stage("TAG") {
             steps {
                 echo "Creating Docker Hub tag..."
-                sh "docker tag zipper:${IMAGE_TAG} ${IMAGE_NAME}:${IMAGE_TAG}"
+                sh "docker tag santra:${IMAGE_TAG} ${IMAGE_NAME}:${IMAGE_TAG}"
             }
         }
 
